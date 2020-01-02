@@ -1,0 +1,122 @@
+:root{
+--blue-color:#126798;
+--black-blue:#242F41;
+--red-color:#E84646;
+/* Espaciado */
+--space-ten:10px;
+}
+html,body{
+  margin:0;
+  padding: 0;
+  font-size: 12px;
+  font-family:Helvetica;
+}
+
+.total{
+  display: grid;
+  grid-template-columns: minmax(30px,300px) 1fr minmax(30px,300px);
+  grid-template-rows: 105px 1fr  80px;
+  grid-template-areas: "header header header"
+                       ". body ."
+                       "footer footer footer";
+  grid-row-gap: 20px;
+}
+/* section{
+  border: 1px solid red;
+} */
+.header{
+  display: grid;
+  grid-area: header;
+  background-color: #126798;
+  grid-template-columns:1fr;
+  grid-template-rows: 70px 35px;
+  grid-template-areas: "head"
+                       "cool";
+  position: relative;
+  text-align: center;
+  justify-content: space-between;
+
+}
+/* div{
+  border: 1px solid red;
+} */
+.head{
+  grid-area: head;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.head form input{
+  font-size: 15px;
+  height: 20px;
+  border-radius: 6px;
+}
+
+.cool{
+  background-color: #242F41;
+  color: white;
+  grid-area: cool;
+  display:flex;
+  justify-content: center;
+  font-size: 13px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.cool ul{
+  display: flex;
+  align-items: center;
+}
+.cool ul li{
+  list-style: none;
+  padding-right: 40px;
+
+}
+.cool ul li a{
+  color: white;
+  text-decoration: none;
+}
+.cool ul li a:hover{
+  color: #126798;
+}
+.body{
+  grid-area: body;
+  display:grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 450px 200px 22px;
+  grid-row-gap: 20px;
+  grid-column-gap: 30px;
+  display:relative;
+  grid-template-areas: "flexslider flexslider flexslider"
+                        "prom1 prom2 prom3"
+                        ". . .";
+}
+.prom1{
+  grid-area: prom1;
+}
+.prom2{
+  grid-area: prom2;
+}
+.prom3{
+  grid-area: prom3;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.flexslider{
+  grid-area: flexslider;
+}
+.footer{
+  grid-area: footer;
+  background-color: #242F41;
+  color: white;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 250px;
+  padding-right: 250px;
+}
